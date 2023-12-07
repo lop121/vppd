@@ -14,7 +14,7 @@ def lighten(color: str, percent: int) -> str:
 
 
 def darken(color: str, percent: int) -> str:
-    '''даем тени'''
+    '''Даем тени'''
     r, g, b = int(color[1:3], 16), int(color[3:5], 16), int(color[5:], 16)
     r = max(0, r - r * percent // 100)
     g = max(0, g - g * percent // 100)
@@ -26,7 +26,7 @@ def darken(color: str, percent: int) -> str:
 
 
 def print_colored_text(text: str, color: str) -> None:
-    '''текст вывод терминал'''
+    '''Текст вывод терминал'''
     print(
         f"\033[38;2;{int(color[1:3], 16)};{int(color[3:5], 16)};"
         f"{int(color[5:], 16)}m{text}\033[0m"
