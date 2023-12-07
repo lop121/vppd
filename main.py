@@ -24,4 +24,12 @@ def darken(color: str, percent: int) -> str:
     print_colored_text("Я очень люблю ВВПД!", new_color)
     return new_color
 
+def print_colored_text(text: str, color: str) -> None:
+    '''текст вывод терминал'''
+    print(
+        f"\033[38;2;{int(color[1:3], 16)};{int(color[3:5], 16)};"
+        f"{int(color[5:], 16)}m{text}\033[0m"
+    )
+
+
 
