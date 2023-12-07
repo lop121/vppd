@@ -24,6 +24,7 @@ def darken(color: str, percent: int) -> str:
     print_colored_text("Я очень люблю ВВПД!", new_color)
     return new_color
 
+
 def print_colored_text(text: str, color: str) -> None:
     '''текст вывод терминал'''
     print(
@@ -32,4 +33,31 @@ def print_colored_text(text: str, color: str) -> None:
     )
 
 
+def main():
+    print('Чтобы выйти из программы, пропишите - #000000 0')
+    while True:
+        print('Пример: #112233 100')
+        try:
+            color, procent = input('Введите нужные значения через пробел: ').split()
+            if color == '#000000' and int(procent) == 0:
+                break
+        except ValueError:
+            print('Что-то не так...')
+            continue
+        try:
+            choice = input('Что нужно сделать?\n'
+                           '(1) Затемнить текст\n'
+                           '(2) Осветлить текст\n'
+                           'Ваш выбор: ')
+            if choice == '1':
+                darken(color, int(procent))
+            elif choice == '2':
+                lighten(color, int(procent))
+            else:
+                print('Что-то не так...')
+        except ValueError:
+            print('Что-то не то...')
 
+
+if __name__ == '__main__':
+    main()
