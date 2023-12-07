@@ -33,7 +33,8 @@ def print_colored_text(text: str, color: str) -> None:
     )
 
 
-def main():
+def main() -> None:
+    """Main function"""
     print('Чтобы выйти из программы, пропишите - #000000 0')
     while True:
         print('Пример: #112233 100')
