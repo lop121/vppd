@@ -1,4 +1,4 @@
-# Color Manipulation Console Application
+# Color Manipulation
 
 This Python script provides a simple console application for interactively lightening or darkening colors and printing colored text to the terminal.
 
